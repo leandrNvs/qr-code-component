@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --white: hsl(1, 0%, 100%);
+   --light-gray: hsl(212, 45%, 89%);
+   --grayish-blue: hsl(220, 15%, 55%);
+   --dark-blue: hsl(218, 44%, 22%);
+   --border-radius: 1rem;
+}
+
+body {
+   font-family: "Outfit", sans-serif;
+   font-size: 15px;
+   min-height: 100vh;
+   background-color: var(--light-gray);
+   display: grid;
+   place-content: center;
+   position: relative;
+}
+
+.card {
+   background-color: var(--white);
+   max-width: 270px;
+   padding: 1rem;
+   border-radius: var(--border-radius);
+   box-shadow: 5px 10px 10px rgba(127, 127, 127, 0.3);
+}
+
+.card__header-img {
+   max-width: 100%;
+   height: auto;
+   border-radius: var(--border-radius);
+}
+
+.card__body > * {
+   margin: 1.1rem 0;
+}
+
+.card__body {
+   text-align: center;
+}
+
+.card__body-title {
+   font-size: 18px;
+   color: var(--dark-blue);
+}
+
+.card__body-description {
+   color: var(--grayish-blue);
+}
+
+.attribution {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   text-align: center;
+   padding: 0.5rem 0;
+}
+
+@media (min-width: 700px) {
+   .card {
+      max-width: 300px;
+   }
+
+   .card__body-title {
+      font-size: 20px;
+   }
+}
